@@ -10,6 +10,7 @@ import SortPopup from "./screens/SortPopup";
 export default function App() {
   const [loading, setLoading] = useState(false);
   const [isSort, setIsSort] = useState(false);
+  const [isDetails, setIsDetails] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -21,7 +22,7 @@ export default function App() {
   return (
     <>
       {isSort ? <SortPopup setIsSort={setIsSort} /> : null}
-      <Header />
+      <Header isDetails={isDetails} />
       {/* <Suspense fallback={<Loader />}> */}
       <Routes>
         <Route
@@ -31,7 +32,13 @@ export default function App() {
 
         <Route
           path="/prooduct-details"
-          element={loading ? <Loader /> : <ProductDetails />}
+          element={
+            loading ? (
+              <Loader />
+            ) : (
+              <ProductDetails setIsDetails={setIsDetails} />
+            )
+          }
         />
       </Routes>
       {/* </Suspense> */}

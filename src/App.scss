@@ -209,6 +209,7 @@ body {
   justify-content: center;
   cursor: pointer;
   margin: 0px 1em;
+  position: relative;
 }
 .header__wrapper__right__entry span {
   font-size: 13px;
@@ -748,8 +749,24 @@ body {
 .filters__stick,
 .home__container__products__sale,
 .filters__mobile__container,
-.popup__container {
+.popup__container,
+.product__detail__img__wrapper,
+.product__details__content {
   display: none;
+}
+.header__wrapper__right__entry__badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #ff3f6c;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 1200px) {
   .header__menu {
@@ -907,21 +924,22 @@ body {
     justify-content: center;
     left: 0;
     margin-bottom: 0;
-    padding: 0.35em 1em;
+    padding: 0em 1em;
     position: fixed;
     right: 0;
     width: 100%;
     z-index: 99;
+    box-shadow: 10px 20px 30px rgb(0, 0, 0, 0.05);
   }
   .filters__stick__btn {
     width: 50%;
-    padding: 1em 0em;
+    padding: 0.8em 0em;
     background: transparent;
     border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 15px;
     color: #000;
   }
@@ -1085,5 +1103,140 @@ body {
   }
   .popup__container__card__entry svg {
     margin-right: 1em;
+  }
+  .header__wrapper__right__entry__badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: #ff3f6c;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product__detail__img__wrapper {
+    width: 100%;
+    height: 500px;
+    display: flex;
+  }
+  .product__detail__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .header__details__heading {
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+  }
+  .header__details__svg {
+    margin-right: 1em;
+  }
+  .swiper-pagination-bullet-active {
+    background: #ff3f6c !important;
+  }
+  .product__details__content {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+  }
+  .product__details__para {
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+  }
+  .product__details__price {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    color: #000;
+    font-weight: 700;
+    margin: 0.3em 0em;
+  }
+  .product__details__price span {
+    margin: 0em 0.5em;
+    font-size: 18px;
+    color: rgb(0, 0, 0, 0.8);
+    font-weight: normal;
+    text-decoration: line-through;
+  }
+  .product__details__price__sub {
+    font-weight: 600;
+    color: #ff3f6c;
+  }
+  .product__details__taxes {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(17, 171, 17);
+  }
+  .product__details__divider {
+    width: 100%;
+    height: 6px;
+    background-color: rgb(0, 0, 0, 0.1);
+    margin: 1.5em 0em;
+  }
+  .product__details__sub__heading {
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
+  }
+  .product__details__shipping__wrapper__left svg {
+    width: 55px;
+    height: 55px;
+    color: #242424;
+  }
+  .product__details__input__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.8em 1em;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    margin: 1em 0em;
+    color: #ff3f6c;
+    font-weight: 500;
+  }
+  .product__details__input {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 80%;
+    font-size: 16px;
+  }
+  .product__details__sub__para {
+    font-size: 14px;
+    color: rgb(0, 0, 0, 0.85);
+    margin-bottom: 0.5em;
+  }
+  .product__details__shipping__wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .product__details__shipping__wrapper__left {
+    width: 22%;
+    display: flex;
+    align-items: center;
+  }
+  .product__details__cupoon__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+  .product__details__cupoon__header a {
+    color: #ff3f6c;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
   }
 }

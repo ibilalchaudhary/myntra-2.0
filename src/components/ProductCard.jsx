@@ -4,7 +4,16 @@ import productPic from "../assets/productPic.png";
 
 export default function ProductCard() {
   return (
-    <Link to="/prooduct-details" className="home__product__card">
+    <Link
+      to="/prooduct-details"
+      onClick={() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }}
+      className="home__product__card"
+    >
       <div className="home__product__card__img__wrapper">
         <img
           src={productPic}
