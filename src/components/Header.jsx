@@ -51,7 +51,7 @@ export default function Header() {
 
     if (window.scrollY > 0) {
       setISScrol(true);
-    } else if (window.screenTop > 0) {
+    } else if (window.scrollTo > 0) {
       setISScrol(false);
     }
     window.addEventListener("resize", () => {
@@ -64,7 +64,7 @@ export default function Header() {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
         setISScrol(true);
-      } else if (window.screenTop > 0) {
+      } else if (window.scrollTo > 0) {
         setISScrol(false);
       }
     });
