@@ -83,7 +83,9 @@ export default function Filters() {
   const [isSearch, setIsSearch] = useState("");
   return (
     <div className="home__container__content__filter__wrapper">
-      <div className="container__filter__heading">FILTERS</div>
+      <div className="container__filter__heading">
+        FILTERS <button>CLEAR ALL</button>
+      </div>
       <div className="container__filters__card">
         <Radio label="Men" />
         <Radio label="Women" />
