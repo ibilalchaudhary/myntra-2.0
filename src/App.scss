@@ -758,7 +758,7 @@ body {
   .header__nav {
     flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 90px;
     left: 0;
     background-color: #fff;
     width: 100%;
@@ -1016,10 +1016,10 @@ body {
   }
   .header__sticky {
     padding: 0.3em;
-    padding-top: 45px;
+    padding-top: 42px;
   }
   .header {
-    padding: 0em;
+    padding: 0.2em;
   }
   .header__wrapper__right {
     width: 50%;
