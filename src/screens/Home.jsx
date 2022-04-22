@@ -53,7 +53,7 @@ function FilterBtn({ title, select, setSelect }) {
   );
 }
 
-export default function Home() {
+export default function Home({ setIsSort }) {
   const [select, setSelect] = useState("");
   const [isMobileFilter, setIsMobileFilter] = useState(false);
   return (
@@ -283,7 +283,16 @@ export default function Home() {
         </div>
       </div>
       <div className="filters__stick">
-        <button className="filters__stick__btn">
+        <button
+          onClick={() => {
+            setIsSort(true);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+          className="filters__stick__btn"
+        >
           {" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"

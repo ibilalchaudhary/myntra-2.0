@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import productPic from "../assets/productPic.png";
 
 export default function ProductCard() {
   return (
-    <div className="home__product__card">
+    <Link to="/prooduct-details" className="home__product__card">
       <div className="home__product__card__img__wrapper">
         <img
           src={productPic}
@@ -61,6 +62,6 @@ export default function ProductCard() {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
