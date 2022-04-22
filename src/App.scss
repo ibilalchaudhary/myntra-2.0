@@ -2,13 +2,13 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
 body {
   background-color: #fff;
-  box-sizing: border-box;
   overflow-x: hidden;
-  position: relative;
+  // position: relative;
 }
 .loader__wrapper {
   width: 100%;
@@ -24,21 +24,26 @@ body {
   align-items: center;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.02);
   position: fixed;
-  top: 0;
+  top: 0px;
   z-index: 9999;
   background: #fff;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .header__wrapper {
   width: 100%;
   max-width: 1440px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
 }
 .header__wrapper__left {
   display: flex;
   align-items: center;
+  width: 50%;
 }
 .header__logo__img {
   width: 55px;
@@ -185,7 +190,9 @@ body {
 }
 .header__wrapper__right {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 45%;
 }
 .header__wrapper__right__svg {
   width: 24px;
@@ -386,6 +393,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0px auto;
+  margin-top: 5em;
 }
 .home__container__heading {
   font-size: 16px;
@@ -732,6 +740,11 @@ body {
   font-size: 12px;
   margin: 0em 0.5em;
 }
+.filters__stick,
+.home__container__products__sale,
+.filters__mobile__container {
+  display: none;
+}
 @media (max-width: 1200px) {
   .header__menu {
     display: flex;
@@ -814,6 +827,7 @@ body {
   }
   .header__logo__img {
     margin-left: 1.3em;
+    width: 45px;
   }
   .header__wrapper__right__entry {
     margin: 0px 0.5em;
@@ -877,13 +891,124 @@ body {
     margin-top: 5em;
   }
   .filters__stick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     background: #fff;
-    padding: 2em 0em;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    height: 80px;
+    bottom: 0px;
+    left: 0px;
+
     position: fixed;
     z-index: 999;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .filters__stick__btn {
+    width: 50%;
+    padding: 1em 0em;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .filters__mobile__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 9999;
+  }
+  .filters__mobile__container__header {
+    width: 100%;
+    padding: 1.3em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    margin: 0px auto;
+  }
+  .filters__mobile__container__header button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #ff3f6c;
+    font-weight: 600;
+  }
+  .filters__mobile__content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .filters__mobile__content__left {
+    width: 35%;
+    background: rgb(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+  }
+  .filters__mobile__content__right {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+  }
+  .filters__mobile__content__left__entry {
+    padding: 1em 0.5em;
+    padding-left: 1.2em;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.12);
+    font-size: 14px;
+    color: #000;
+    display: flex;
+    text-align: start;
+    transition: all 300ms ease-in-out;
+  }
+  .filters__mobile__content__left__entry__selected {
+    background-color: #fff;
+  }
+  .filters__mobile__content__right__entry {
+    padding: 0.5em 0em;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  }
+  .filters__mobile__content__input {
+    width: 100%;
+    padding: 0.8em 1em;
+    background: rgb(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: none;
+    margin: 1em 0em;
+    outline: none;
+  }
+  .filters__mobile__content__btn__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgb(0, 0, 0, 0.1);
+    margin-bottom: 3em;
+  }
+  .filters__mobile__content__btn {
+    width: 50%;
+    padding: 0.8em 0em;
+    padding-top: 1.5em;
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
   }
 }

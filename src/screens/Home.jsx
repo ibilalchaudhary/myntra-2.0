@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Checkbox from "../components/Checkbox";
+import FilterMobile from "../components/FilterMobile";
 import Filters from "../components/Filters";
 import ProductCard from "../components/ProductCard";
 import Radio from "../components/Radio";
@@ -54,6 +55,7 @@ function FilterBtn({ title, select, setSelect }) {
 
 export default function Home() {
   const [select, setSelect] = useState("");
+  const [isMobileFilter, setIsMobileFilter] = useState(false);
   return (
     <>
       <div className="home__container">
@@ -282,8 +284,24 @@ export default function Home() {
       </div>
       <div className="filters__stick">
         <button className="filters__stick__btn">SORT</button>
-        <button className="filters__stick__btn">Filter</button>
+        <button
+          onClick={() => {
+            setIsMobileFilter(true);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+          className="filters__stick__btn"
+        >
+          Filter
+        </button>
       </div>
+      {isMobileFilter ? (
+        <div className="filters__mobile__container">
+          <FilterMobile setIsMobileFilter={setIsMobileFilter} />
+        </div>
+      ) : null}
     </>
   );
 }

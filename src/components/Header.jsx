@@ -47,6 +47,16 @@ export default function Header() {
     });
   }, []);
 
+  window.scroll(() => {
+    if (window.scrollTop() > 33) {
+      "#header".addClass("sticky-header");
+      "#header".addClass("header");
+    } else {
+      "#header".removeClass("header");
+      "#header".removeClass("header");
+    }
+  });
+
   return (
     <div className="header">
       <div className="header__wrapper">
@@ -118,46 +128,6 @@ export default function Header() {
                     info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
                     to: "/",
                   },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
                 ]}
               />
 
@@ -165,27 +135,6 @@ export default function Header() {
                 title="Women"
                 to="/"
                 list={[
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
                   {
                     title: "LOREM IPSUM",
                     info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
@@ -217,46 +166,6 @@ export default function Header() {
                 title="Kids"
                 to="/"
                 list={[
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
-                  {
-                    title: "LOREM IPSUM",
-                    info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
-                    to: "/",
-                  },
                   {
                     title: "LOREM IPSUM",
                     info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.",
