@@ -283,7 +283,18 @@ export default function Home() {
         </div>
       </div>
       <div className="filters__stick">
-        <button className="filters__stick__btn">SORT</button>
+        <button className="filters__stick__btn">
+          {" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M6 3l-6 8h4v10h4v-10h4l-6-8zm16 14h-8v-2h8v2zm2 2h-10v2h10v-2zm-4-8h-6v2h6v-2zm-2-4h-4v2h4v-2zm-2-4h-2v2h2v-2z" />
+          </svg>
+          SORT
+        </button>
         <button
           onClick={() => {
             setIsMobileFilter(true);
@@ -294,6 +305,14 @@ export default function Home() {
           }}
           className="filters__stick__btn"
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M19.479 2l-7.479 12.543v5.924l-1-.6v-5.324l-7.479-12.543h15.958zm3.521-2h-23l9 15.094v5.906l5 3v-8.906l9-15.094z" />
+          </svg>{" "}
           Filter
         </button>
       </div>
