@@ -32,11 +32,27 @@ function NavLink({ title, to, list }) {
 }
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isScroll, setISScrol] = useState(false);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      setISScrol(true);
+    } else if (window.scrollY === 0) {
+      setISScrol(false);
+    }
+  });
+
   useEffect(() => {
     if (window.innerWidth <= 1200) {
       setIsNavOpen(false);
     } else {
       setIsNavOpen(true);
+    }
+
+    if (window.scrollY > 0) {
+      setISScrol(true);
+    } else if (window.screenTop > 0) {
+      setISScrol(false);
     }
     window.addEventListener("resize", () => {
       if (window.innerWidth <= 1200) {
@@ -45,20 +61,17 @@ export default function Header() {
         setIsNavOpen(true);
       }
     });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        setISScrol(true);
+      } else if (window.screenTop > 0) {
+        setISScrol(false);
+      }
+    });
   }, []);
 
-  window.scroll(() => {
-    if (window.scrollTop() > 33) {
-      "#header".addClass("sticky-header");
-      "#header".addClass("header");
-    } else {
-      "#header".removeClass("header");
-      "#header".removeClass("header");
-    }
-  });
-
   return (
-    <div className="header">
+    <div className={isScroll ? "header__sticky" : "header"}>
       <div className="header__wrapper">
         <div className="header__wrapper__left">
           <button
