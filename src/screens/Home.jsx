@@ -55,222 +55,235 @@ function FilterBtn({ title, select, setSelect }) {
 export default function Home() {
   const [select, setSelect] = useState("");
   return (
-    <div className="home__container">
-      <div className="home__container__heading">
-        <span>Myntra</span> - 1256188 items
-      </div>
-      <div className="home__container__content">
-        <Filters />
-        <div className="home__container__content__right">
-          <div className="home__container__content__right__header">
-            <div className="home__container__content__right__header__left">
-              <FilterBtn
-                select={select}
-                setSelect={setSelect}
-                title="Bundles"
-              />
-              <FilterBtn
-                select={select}
-                setSelect={setSelect}
-                title="Country of Origin"
-              />
-              <FilterBtn select={select} setSelect={setSelect} title="Size" />
-            </div>
-            <div className="home__container__content__right__header__right">
-              <div className="home__container__products__content__entry">
-                Sort by : High to low
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-chevron-down"
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-                <div className="home__container__products__content__entry__dropdown">
-                  <div className="home__container__products__content__entry__dropdown__entry">
-                    Whats new
-                  </div>
-                  <div className="home__container__products__content__entry__dropdown__entry">
-                    Products in trending
-                  </div>
-                  <div className="home__container__products__content__entry__dropdown__entry">
-                    High to low
-                  </div>
-                  <div className="home__container__products__content__entry__dropdown__entry">
-                    Low to high
+    <>
+      <div className="home__container">
+        <div className="home__container__heading">
+          <span>Myntra</span> - 1256188 items
+        </div>
+        <div className="home__container__content">
+          <Filters />
+          <div className="home__container__content__right">
+            <div className="home__container__content__right__header">
+              <div className="home__container__content__right__header__left">
+                <FilterBtn
+                  select={select}
+                  setSelect={setSelect}
+                  title="Bundles"
+                />
+                <FilterBtn
+                  select={select}
+                  setSelect={setSelect}
+                  title="Country of Origin"
+                />
+                <FilterBtn select={select} setSelect={setSelect} title="Size" />
+              </div>
+              <div className="home__container__content__right__header__right">
+                <div className="home__container__products__content__entry">
+                  Sort by : High to low
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-chevron-down"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                  <div className="home__container__products__content__entry__dropdown">
+                    <div className="home__container__products__content__entry__dropdown__entry">
+                      Whats new
+                    </div>
+                    <div className="home__container__products__content__entry__dropdown__entry">
+                      Products in trending
+                    </div>
+                    <div className="home__container__products__content__entry__dropdown__entry">
+                      High to low
+                    </div>
+                    <div className="home__container__products__content__entry__dropdown__entry">
+                      Low to high
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          {select === "Bundles" ? (
-            <div className="filters__btn__wrapper">
-              <Checkbox label="Bundles" />
-              <Checkbox label="Single Style" />
+            {select === "Bundles" ? (
+              <div className="filters__btn__wrapper">
+                <Checkbox label="Bundles" />
+                <Checkbox label="Single Style" />
+              </div>
+            ) : null}
+            {select === "Country of Origin" ? (
+              <div className="filters__btn__wrapper">
+                <Checkbox label="All Countries" />
+                <Checkbox label="India" />
+              </div>
+            ) : null}
+            {select === "Size" ? (
+              <div className="filters__btn__wrapper">
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+                <Checkbox label="0-3M" />
+                <Checkbox label="16x16" />
+              </div>
+            ) : null}
+            <div className="home__container__products__sale">
+              <div className="home__container__products__sale__left">
+                FLAT 300 OFF <span>MYNTRA300 </span>
+              </div>
+              <div className="home__container__products__sale__right">
+                Free Shipping <span>On First Order </span>
+              </div>
             </div>
-          ) : null}
-          {select === "Country of Origin" ? (
-            <div className="filters__btn__wrapper">
-              <Checkbox label="All Countries" />
-              <Checkbox label="India" />
+            <div className="home__container__products__content">
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
             </div>
-          ) : null}
-          {select === "Size" ? (
-            <div className="filters__btn__wrapper">
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-              <Checkbox label="0-3M" />
-              <Checkbox label="16x16" />
-            </div>
-          ) : null}
-
-          <div className="home__container__products__content">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
           </div>
         </div>
       </div>
-    </div>
+      <div className="filters__stick">
+        <button className="filters__stick__btn">SORT</button>
+        <button className="filters__stick__btn">Filter</button>
+      </div>
+    </>
   );
 }
