@@ -52,7 +52,16 @@ export default function Header({ isDetails }) {
         <div className="header__wrapper__left">
           {isDetails ? (
             <>
-              <Link to="/" className="header__details__svg">
+              <Link
+                to="/"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }}
+                className="header__details__svg"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

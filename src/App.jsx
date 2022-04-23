@@ -6,12 +6,18 @@ import Header from "./components/Header";
 import Home from "./screens/Home";
 import Loader from "./screens/Loader";
 import ProductDetails from "./screens/ProductDetails";
+import SizeChart from "./screens/SizeChart";
+import SizePopup from "./screens/SizePopup";
 import SortPopup from "./screens/SortPopup";
+import WishlistPopup from "./screens/WishlistPopup";
 
 export default function App() {
   const [loading, setLoading] = useState(false);
   const [isSort, setIsSort] = useState(false);
   const [isDetails, setIsDetails] = useState(false);
+  const [isSize, setIsSize] = useState(false);
+  const [isSizeChart, setIsSizeChart] = useState(false);
+  const [isWish, setIsWish] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -23,7 +29,10 @@ export default function App() {
   return (
     <>
       {isSort ? <SortPopup setIsSort={setIsSort} /> : null}
-      <Header isDetails={isDetails} />
+      {isSize ? <SizePopup setIsSize={setIsSize} /> : null}
+      {isWish ? <WishlistPopup setIsWish={setIsWish} /> : null}
+      {isSizeChart ? null : <Header isDetails={isDetails} />}
+
       {/* <Suspense fallback={<Loader />}> */}
       <Routes>
         <Route
@@ -37,13 +46,21 @@ export default function App() {
             loading ? (
               <Loader />
             ) : (
-              <ProductDetails setIsDetails={setIsDetails} />
+              <ProductDetails
+                setIsDetails={setIsDetails}
+                setIsSize={setIsSize}
+                setIsWish={setIsWish}
+              />
             )
           }
         />
+        <Route
+          path="/size-chart"
+          element={<SizeChart setIsSizeChart={setIsSizeChart} />}
+        />
       </Routes>
       {/* </Suspense> */}
-      <Footer />
+      {isSizeChart ? null : <Footer />}
     </>
   );
 }

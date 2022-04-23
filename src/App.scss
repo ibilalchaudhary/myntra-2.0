@@ -1224,6 +1224,9 @@ body {
     font-weight: 600;
     padding-bottom: 1em;
     border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .popup__container__card__entry {
     margin-top: 1.5em;
@@ -1313,9 +1316,9 @@ body {
     margin: 1.5em 0em;
   }
   .product__details__sub__heading {
-    font-size: 18px;
+    font-size: 15px;
     color: #000;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0.5em;
     display: flex;
     flex-direction: column;
@@ -1386,5 +1389,188 @@ body {
   .footer__container__content__left {
     justify-content: center;
     align-items: center;
+  }
+  .add__to__bag__btn {
+    padding: 0.8em 1em;
+    border-radius: 4px;
+    width: 60%;
+    background: #ff3f6c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    margin-bottom: 0.3em;
+  }
+  .add__to__bag__btn svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5em;
+  }
+  .wishlist__btn {
+    padding: 0.8em 1em;
+    border-radius: 4px;
+    width: 36%;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    background: transparent;
+    margin-right: 0.5em;
+    margin-bottom: 0.3em;
+  }
+  .wishlist__btn svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5em;
+  }
+  .popup__container__card__popup__btn {
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #ff3f6c;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .popup__container__card__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    padding: 1.5em 0em;
+  }
+  .popup__container__size__entry {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5em;
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+
+  @keyframes shake {
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  .size__chart__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    padding: 1em;
+  }
+  .size__chart__container__content {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+  }
+  .size__chart__container__svg {
+    color: #000;
+  }
+  .size__chart__container__content__img {
+    width: 80px;
+    margin-right: 1em;
+  }
+  .size__chart__container__btn__wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5em 0em;
+  }
+  .size__chart__container__btn {
+    width: 45%;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    color: rgb(0, 0, 0, 0.76);
+    font-weight: 600;
+    padding-bottom: 0.3em;
+  }
+  .size__chart__container__btn__selected {
+    border-bottom: 4px solid #ff3f6c;
+    border-radius: 3px;
+    color: #ff3f6c;
+    padding-bottom: 0.3em;
+  }
+  .size__chart__container__measure__wrapper__header {
+    width: 100%;
+    display: flex;
+    margin-bottom: 0.9em;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  .size__chart__container__measure__wrapper__header__entry {
+    font-size: 11px;
+    font-weight: 500;
+    width: 16%;
+    text-align: center;
+  }
+  .size__chart__container__measure__wrapper__entry {
+    font-size: 11px;
+    width: 16%;
+    text-align: center;
+  }
+  .size__chart__container__measure__wrapper__header__btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    border: 1px solid rgb(36, 36, 36, 0.6);
+    background-color: transparent;
+  }
+  .size__chart__container__measure__wrapper__header__btn__select {
+    padding: 0.1em;
+    background: #ff3f6c;
+    border: 1px solid #ff3f6c;
+  }
+  .size__chart__container__measure__wrapper__entry__select {
+    font-weight: 600;
+  }
+  .size__chart__container__measure__img {
+    margin-top: 2em;
+    width: 300px;
+  }
+  .popup__container__card__cart__gif {
+    width: 300px;
+    height: 300px;
   }
 }

@@ -8,8 +8,10 @@ import product2 from "../assets/product2.jpg";
 import product3 from "../assets/product3.jpg";
 import product4 from "../assets/product4.jpg";
 import product5 from "../assets/product5.jpg";
+import reviewsTestPic from "../assets/reviewsTestPic.png";
+import ProductCard from "../components/ProductCard";
 
-export default function ProductDetails({ setIsDetails }) {
+export default function ProductDetails({ setIsDetails, setIsSize, setIsWish }) {
   useEffect(() => {
     setIsDetails(true);
 
@@ -158,6 +160,77 @@ export default function ProductDetails({ setIsDetails }) {
           </div>
           <a href="">View</a>
         </div>
+        <div className="product__details__divider"></div>
+        <img
+          src={reviewsTestPic}
+          alt="reviewsTestPic"
+          className="product__details__img"
+        />
+      </div>
+      <div className="home__container__products__content">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
+
+      {/* bottom stick */}
+      <div className="filters__stick">
+        <button
+          onClick={() => {
+            setIsWish(true);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+          className="wishlist__btn"
+        >
+          {" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M6 3l-6 8h4v10h4v-10h4l-6-8zm16 14h-8v-2h8v2zm2 2h-10v2h10v-2zm-4-8h-6v2h6v-2zm-2-4h-4v2h4v-2zm-2-4h-2v2h2v-2z" />
+          </svg>
+          Wishlist
+        </button>
+        <button
+          onClick={() => {
+            setIsSize(true);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+          className="add__to__bag__btn"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="24"
+            viewBox="0 0 20 24"
+          >
+            <path
+              id="Path_1"
+              data-name="Path 1"
+              d="M20,7H16V4A4,4,0,0,0,8,4V7H4L2,24H22ZM9,4a3,3,0,0,1,6,0V7H9ZM4.249,22,5.778,9H8v1.5a.5.5,0,0,0,1,0V9h6v1.5a.5.5,0,0,0,1,0V9h2.222l1.529,13H4.249Z"
+              transform="translate(-2)"
+              fill="#fff"
+            />
+          </svg>
+          Add to bag
+        </button>
       </div>
     </>
   );
