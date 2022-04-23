@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-import user from "../assets/user.svg";
-import heart from "../assets/heart.svg";
-import cart from "../assets/cart.svg";
 
 function NavLink({ title, to, list }) {
   return (
@@ -32,15 +29,6 @@ function NavLink({ title, to, list }) {
 }
 export default function Header({ isDetails }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  // const [isScroll, setISScrol] = useState(false);
-
-  // window.addEventListener("scroll", () => {
-  //   if (window.scrollY > 0) {
-  //     setISScrol(true);
-  //   } else if (window.scrollY === 0) {
-  //     setISScrol(false);
-  //   }
-  // });
 
   useEffect(() => {
     if (window.innerWidth <= 1200) {
@@ -49,11 +37,6 @@ export default function Header({ isDetails }) {
       setIsNavOpen(true);
     }
 
-    // if (window.scrollY > 0) {
-    //   setISScrol(true);
-    // } else if (window.scrollTo > 0) {
-    //   setISScrol(false);
-    // }
     window.addEventListener("resize", () => {
       if (window.innerWidth <= 1200) {
         setIsNavOpen(false);
@@ -61,13 +44,6 @@ export default function Header({ isDetails }) {
         setIsNavOpen(true);
       }
     });
-    // window.addEventListener("scroll", () => {
-    //   if (window.scrollY > 0) {
-    //     setISScrol(true);
-    //   } else if (window.scrollTo > 0) {
-    //     setISScrol(false);
-    //   }
-    // });
   }, []);
 
   return (

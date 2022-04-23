@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./screens/Home";
 import Loader from "./screens/Loader";
@@ -42,6 +43,7 @@ export default function App() {
         />
       </Routes>
       {/* </Suspense> */}
+      <Footer />
     </>
   );
 }
