@@ -10,6 +10,7 @@ import product4 from "../assets/product4.jpg";
 import product5 from "../assets/product5.jpg";
 import reviewsTestPic from "../assets/reviewsTestPic.png";
 import ProductCard from "../components/ProductCard";
+import { Link } from "react-router-dom";
 
 export default function ProductDetails({ setIsDetails, setIsSize, setIsWish }) {
   useEffect(() => {
@@ -141,7 +142,17 @@ export default function ProductDetails({ setIsDetails, setIsSize, setIsWish }) {
           <div style={{ margin: 0 }} className="product__details__sub__heading">
             Best Price
           </div>
-          <a href="">View Products</a>
+          <Link
+            to="/"
+            onClick={() => {
+              winodw.scrollTo({
+                top: 0,
+              });
+            }}
+            href=""
+          >
+            View Products
+          </Link>
         </div>
         <div className="product__details__sub__para">
           Applicable on: Orders above Rs. 799 (only on first purchase)
@@ -166,30 +177,71 @@ export default function ProductDetails({ setIsDetails, setIsSize, setIsWish }) {
           alt="reviewsTestPic"
           className="product__details__img"
         />
-      </div>
-      <div className="home__container__products__content">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <div className="product__details__divider"></div>
+        <div className="product__details__sub__heading">
+          Product Description
+        </div>
+
+        <div className="product__details__sub__para">
+          100% Original Products
+        </div>
+        <div className="product__details__sub__para">
+          Pay on delivery might be available
+        </div>
+        <div className="product__details__sub__para">
+          Easy 30 days returns and exchanges
+        </div>
+        <div className="product__details__sub__para">
+          Blue printed kurta with palazzos
+        </div>
+        <div className="product__details__sub__para">
+          100% Original Products
+        </div>
+        <div className="product__details__sub__para">
+          Pay on delivery might be available
+        </div>
+        <div className="product__details__sub__para">
+          Easy 30 days returns and exchanges
+        </div>
+        <div className="product__details__sub__para">
+          Blue printed kurta with palazzos
+        </div>
+        <div className="product__details__divider"></div>
+        <div
+          style={{ marginBottom: 20 }}
+          className="product__details__sub__heading"
+        >
+          Similiar Products
+        </div>
+        <div className="home__container__products__content">
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </div>
       </div>
 
       {/* bottom stick */}
-      <div className="filters__stick">
+      <div style={{ padding: 6 }} className="filters__stick">
         <button
           onClick={() => {
             setIsWish(true);
             window.scrollTo({
               top: 0,
-              behavior: "smooth",
             });
           }}
           className="wishlist__btn"
@@ -210,7 +262,6 @@ export default function ProductDetails({ setIsDetails, setIsSize, setIsWish }) {
             setIsSize(true);
             window.scrollTo({
               top: 0,
-              behavior: "smooth",
             });
           }}
           className="add__to__bag__btn"

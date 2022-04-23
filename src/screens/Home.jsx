@@ -288,7 +288,6 @@ export default function Home({ setIsSort }) {
             setIsSort(true);
             window.scrollTo({
               top: 0,
-              behavior: "smooth",
             });
           }}
           className="filters__stick__btn"
@@ -309,7 +308,6 @@ export default function Home({ setIsSort }) {
             setIsMobileFilter(true);
             window.scrollTo({
               top: 0,
-              behavior: "smooth",
             });
           }}
           className="filters__stick__btn"
