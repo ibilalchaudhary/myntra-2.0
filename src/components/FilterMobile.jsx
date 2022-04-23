@@ -1,6 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Checkbox from "./Checkbox";
 import Radio from "./Radio";
+
+function useImperativeDisableScroll({ element, disabled }) {
+  useEffect(() => {
+    if (!element) {
+      return;
+    }
+
+    element.style.overflowY = disabled ? "hidden" : "scroll";
+
+    return () => {
+      element.style.overflowY = "scroll";
+    };
+  }, [disabled]);
+}
 
 function MobileFilterEntry({ title, setSelect, select }) {
   return (
@@ -21,6 +35,11 @@ function MobileFilterEntry({ title, setSelect, select }) {
 
 export default function FilterMobile({ setIsMobileFilter }) {
   const [select, setSelect] = useState("Gender");
+
+  useImperativeDisableScroll({
+    element: document.scrollingElement,
+    disabled: true,
+  });
 
   return (
     <>

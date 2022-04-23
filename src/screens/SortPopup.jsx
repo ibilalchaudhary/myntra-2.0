@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+function useImperativeDisableScroll({ element, disabled }) {
+  useEffect(() => {
+    if (!element) {
+      return;
+    }
+
+    element.style.overflowY = disabled ? "hidden" : "scroll";
+
+    return () => {
+      element.style.overflowY = "scroll";
+    };
+  }, [disabled]);
+}
 
 export default function SortPopup({ setIsSort }) {
+  useImperativeDisableScroll({
+    element: document.scrollingElement,
+    disabled: true,
+  });
   return (
     <div
       onClick={() => {
